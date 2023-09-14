@@ -1,0 +1,89 @@
+:root {font-size: 16px; box-sizing: border-box;}
+*,*::after,*::before {margin: 0; padding: 0; box-sizing: inherit;}
+
+/* header */
+header {
+    height: 5em; padding:0 1em;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.link {font-size: 1em; font-weight: bold; text-decoration: none; margin: 0 0.5em 0 0; padding: 0.5em 1em;}
+.link--brand {padding: 0; margin: 0; color: green; font-size: 1.5rem;}
+.link--brand span {color: red;}
+.link--nav {color: gray; padding: 0.5em;} .link--nav:hover {color: black;}
+.join .link {border-radius: 0.3em;}
+.link--login {color: lightcoral; border: 0.1em solid;} .link--login:hover {color: red;}
+.link--startTrial {color: white; background-color: lightcoral; border: 0.1em solid lightcoral;} .link--startTrial:hover {background-color: red;}
+.menu {font-size: 1.3em; border: none; background: transparent; width: 1em; position: fixed; color: transparent;} #view {rotate: 90deg;}
+
+/* heroSection */
+.heroSection {
+    display: flex; padding: 5em 7em; background-color: rgb(7, 67, 67);
+}
+img {height: 20em; align-self: center;}
+.abtext {display: block;}
+.abtext--subtitle {color: gray; font-weight: bold; margin: 0 0 0.5em 0; font-size: 1.5em;}
+.abtext--title {font-size: 3.5em; color: white;}
+.abtext--description {width: 70%; font-size: 1em;  color: gray; margin: 2.5em 0;}
+.link--pro {margin: 0; background-color: green; color: white; font-size: 1.2em; border-radius: 0.5em;} .link--pro:hover {background-color: red;}
+
+/* skillset */
+.skillset {
+    display: flex; padding: 7em; gap: 7em;
+}
+.skill {display: flex; flex-direction: column; gap: 1.5em; text-align: center;}
+.skill p {color: gray;}
+
+/* footer */
+footer {
+    display: flex; gap: 10em; background-color: rgb(15, 100, 100); padding: 5em;
+}
+.social, form {width: 100%;}
+.ft {display: block;}
+.ft--title {font-size: 2.5em; color: white;}
+.ft--description {font-size: 1em; margin: 1em 0 0 0; color: darkgray;}
+.ft--socialIcons {margin: 2em 0 0 0; display: flex; gap: 1em;}
+.ft--socialIcons a {text-decoration: none; color: white;}
+form {display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 1em;}
+input, textarea {width: 20em; font-size: 1em; padding: 0.5em 1.5em; border: none; border-radius: 6px;} textarea {min-height: 5em;}
+input[type="submit"] {background-color: rgb(7, 67, 67); color: white; font-weight: bold; cursor: pointer;}
+
+
+@media (max-width: 1024px) {
+    :root {font-size: 14px;}
+    .abtext--title {font-size: 3em;}
+    .skillset {gap: 5em;}
+}
+@media (max-width: 768px) {
+    :root {font-size: 12px;}
+    .abtext--title {font-size: 2.5em;}
+    .abtext--description {width: 85%;}
+    .skillset {gap: 3em;}
+    input, textarea {padding: 0.5em 1em;}
+}
+@media (max-width: 426px) {
+    :root {font-size: 10.5px;}
+    .nav {
+        position: fixed; top: 5em; right: -100%; width: 100%; height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 2em; padding: 2em 0 0 0;
+        background-color: rgb(7, 67, 67); transition: all 250ms linear;
+    }
+    .link--nav {font-size: 1.5em; color: white;} .link--nav:hover {color: red;}
+    .menu {position: static; color: red; font-weight: bold; cursor: pointer;}
+    #hide {display: none;}
+    .heroSection {flex-direction: column; gap: 5em; padding: 5em;}
+    .abtext--description {width: 100%;}
+    .skillset {flex-direction: column; gap: 5em;}
+    footer {
+        flex-direction: column; justify-content: center; align-items: center; gap: 5em;
+    }
+}
+@media (max-width: 320px) {
+    :root {font-size: 10px;}
+    .join .link {
+        font-size: 0.7em;
+    }
+    .heroSection {padding: 5em 2em;}
+    .abtext--title {font-size: 2.3em;}
+    img {width: 70%;}
+    .skillset {padding: 7em 4em; gap: 3em;}
+    footer {padding: 5em 2em;}
+}
