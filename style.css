@@ -69,8 +69,9 @@ input[type="submit"] {background-color: rgb(7, 67, 67); color: white; font-weigh
     .link--nav {font-size: 1.5em; color: white;} .link--nav:hover {color: red;}
     .menu {position: static; color: red; font-weight: bold; cursor: pointer;}
     #hide {display: none;}
-    .heroSection {flex-direction: column; gap: 5em; padding: 5em;}
-    .abtext--description {width: 100%;}
+    .heroSection {flex-direction: column; gap: 5em; padding: 5em 3em;}
+    .abtext--title {font-size: 2.3em;}
+    .abtext--description {width: 80%;}
     .skillset {flex-direction: column; gap: 5em;}
     footer {
         flex-direction: column; justify-content: center; align-items: center; gap: 5em;
